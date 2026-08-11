@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Pour ma Bichette — 9 ans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: radial-gradient(ellipse at top, #142033 0%, #0a1120 55%, #050810 100%);
+  color: #f1e2c2;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff8 50%, transparent),
+    radial-gradient(1px 1px at 70% 60%, #fff6 50%, transparent),
+    radial-gradient(2px 2px at 40% 80%, #fff5 50%, transparent),
+    radial-gradient(1px 1px at 85% 20%, #fff7 50%, transparent),
+    radial-gradient(1px 1px at 55% 45%, #fff5 50%, transparent),
+    radial-gradient(1px 1px at 10% 70%, #fff6 50%, transparent),
+    radial-gradient(2px 2px at 90% 85%, #fff4 50%, transparent);
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  opacity:.6;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 60px 24px;
+  z-index:1;
+}
+
+.gold { color:#d9b25f; }
+.hr {
+  width: 90px; height:1px;
+  background: linear-gradient(90deg, transparent, #d9b25f, transparent);
+  margin: 22px auto;
+}
+
+/* --- Cover --- */
+#cover h2.date {
+  letter-spacing: 6px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color:#d9b25f;
+  margin-bottom: 18px;
+}
+#cover .big {
+  font-family:'Great Vibes', cursive;
+  font-size: clamp(60px, 12vw, 130px);
+  color: #f5e3b3;
+  text-shadow: 0 0 30px rgba(217,178,95,.35);
+  line-height: 1;
+}
+#cover .sub {
+  font-size: clamp(22px, 4vw, 30px);
+  font-style: italic;
+  margin-top: 14px;
+  color: #e9d9b0;
+}
+#cover .years {
+  margin-top: 40px;
+  font-size: clamp(70px, 15vw, 150px);
+  font-weight: 600;
+  color: #d9b25f;
+  line-height: 1;
+  position: relative;
+}
+#cover .years span.label {
+  display:block;
+  font-family:'Cormorant Garamond', serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 6px;
+  color:#c9b587;
+}
+.hearts-row { margin-top: 44px; font-size: 22px; letter-spacing: 14px; opacity:.8; }
+.scroll-hint {
+  position:absolute; bottom: 34px; left:50%; transform:translateX(-50%);
+  font-size:13px; letter-spacing:3px; text-transform:uppercase; color:#8d7a52;
+  animation: float 2.4s ease-in-out infinite;
+}
+@keyframes float { 0%,100%{transform:translate(-50%,0);} 50%{transform:translate(-50%,10px);} }
+
+/* --- Letter --- */
+.letter-box {
+  max-width: 640px;
+  border: 1px solid #6b5a34;
+  padding: 48px 40px;
+  background: linear-gradient(180deg, rgba(30,38,58,.4), rgba(10,15,28,.4));
+  border-radius: 4px;
+  box-shadow: 0 0 60px rgba(217,178,95,.06);
+}
+.letter-box .heading {
+  font-family:'Great Vibes', cursive;
+  font-size: 44px;
+  color:#e9c874;
+  margin-bottom: 20px;
+}
+.letter-box p {
+  font-size: 20px;
+  line-height: 1.85;
+  color: #ecdfc0;
+  margin-bottom: 18px;
+  text-align: left;
+}
+.letter-box .signoff {
+  margin-top: 26px;
+  font-family:'Great Vibes', cursive;
+  font-size: 34px;
+  color:#d9b25f;
+  text-align:right;
+}
+
+/* --- Vow / pact --- */
+.pact-grid {
+  display:grid; grid-template-columns: 1fr; gap: 22px;
+  max-width: 560px; width:100%;
+}
+.pact-item {
+  border-top: 1px solid #4a3f28;
+  padding-top: 16px;
+  text-align:left;
+}
+.pact-item .num { color:#d9b25f; font-size:14px; letter-spacing:3px; }
+.pact-item p { font-size: 19px; margin-top:6px; color:#e6d8b4; }
+
+/* --- Packing list ticket --- */
+.ticket {
+  max-width: 560px;
+  width: 100%;
+  background: linear-gradient(160deg, #16233a, #0c1424);
+  border: 1px solid #d9b25f55;
+  border-radius: 10px;
+  padding: 40px 36px;
+  position: relative;
+}
+.ticket:before, .ticket:after {
+  content:""; position:absolute; width:26px; height:26px; border-radius:50%;
+  background: #050810; top:50%; transform:translateY(-50%);
+}
+.ticket:before { left:-13px; }
+.ticket:after { right:-13px; }
+.ticket h3 { font-family:'Great Vibes', cursive; font-size:36px; color:#e9c874; margin-bottom:4px;}
+.ticket .tsub { font-size:15px; letter-spacing:3px; text-transform:uppercase; color:#a8956a; margin-bottom:26px;}
+.cat { text-align:left; margin-bottom: 22px; }
+.cat h4 { color:#d9b25f; font-size:17px; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+.cat ul { list-style:none; }
+.cat li { font-size: 18px; color:#e6d8b4; padding: 5px 0 5px 26px; position:relative; }
+.cat li:before { content:"♡"; position:absolute; left:0; color:#d9b25f; }
+
+/* --- Final --- */
+#final .big2 {
+  font-family:'Great Vibes', cursive;
+  font-size: clamp(46px,9vw,90px);
+  color:#f5e3b3;
+}
+#final p { max-width: 520px; font-size:19px; line-height:1.8; color:#e6d8b4; margin:20px auto; }
+.heart-final { font-size:40px; margin-top: 10px; color:#c9425a; animation: pulse 1.8s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.15);} }
+
+.fade { opacity:1; transition: opacity 1s ease, transform 1s ease; }
+.fade.js-ready { opacity:0; transform: translateY(24px); }
+.fade.js-ready.in { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<section id="cover">
+  <h2 class="date fade">Le 12 août 2026</h2>
+  <div class="big fade">Pour ma Bichette</div>
+  <div class="sub fade">Notre histoire continue…</div>
+  <div class="years fade">9<span class="label">ans à t'aimer</span></div>
+  <div class="hearts-row fade">♡ ♡ ♡</div>
+  <div class="scroll-hint">fais glisser ↓</div>
+</section>
+
+<section id="letter">
+  <div class="letter-box fade">
+    <div class="heading">Ma Bichette,</div>
+    <p>9 ans. Neuf années à te choisir, encore et encore, même dans les jours où ce n'était pas simple. On a traversé des tempêtes, on a beaucoup pris sur nous, et pourtant, à chaque fois, on est revenus l'un vers l'autre. C'est ça, pour moi, la vraie preuve d'amour : pas l'absence de difficultés, mais la décision de rester, ensemble, envers et contre tout.</p>
+    <p>Demain, je veux qu'on s'offre une parenthèse. Rien que nous deux, loin du bruit, loin des obligations. Un endroit que je garde secret, juste pour voir tes yeux s'illuminer en découvrant où je t'emmène.</p>
+    <p>Ce séjour, c'est mon cadeau, mais surtout c'est un rappel : celui de la femme dont je suis tombé amoureux, et de tout ce qu'on continue de construire, à deux.</p>
+    <div class="signoff">Je t'aime. Toujours.</div>
+  </div>
+</section>
+
+<section id="pact">
+  <h3 class="gold fade" style="font-size:28px; letter-spacing:3px; text-transform:uppercase; margin-bottom:34px;">Notre pacte pour ce séjour</h3>
+  <div class="pact-grid fade">
+    <div class="pact-item">
+      <div class="num">I.</div>
+      <p>On laisse les téléphones de côté et on se regarde, vraiment.</p>
+    </div>
+    <div class="pact-item">
+      <div class="num">II.</div>
+      <p>On relâche la pression des derniers mois — ici, il n'y a que nous.</p>
+    </div>
+    <div class="pact-item">
+      <div class="num">III.</div>
+      <p>On se laisse porter par la surprise, sans chercher à tout contrôler.</p>
+    </div>
+    <div class="pact-item">
+      <div class="num">IV.</div>
+      <p>On se souvient pourquoi, après 9 ans, on se choisit encore.</p>
+    </div>
+  </div>
+</section>
+
+<section id="packing">
+  <div class="ticket fade">
+    <h3>Ma Bichette</h3>
+    <div class="tsub">Laisse-toi emporter par notre amour</div>
+    <div class="cat">
+      <h4>Détente &amp; baignade</h4>
+      <ul>
+        <li>Maillot de bain plutôt public + maillot de bain plutôt intime</li>
+        <li>Chaussures légères</li>
+        <li>Serviette</li>
+      </ul>
+    </div>
+    <div class="cat">
+      <h4>Tenues</h4>
+      <ul>
+        <li>Des affaires confortables pour l'arrivée</li>
+        <li>Ta tenue et tes chaussures préférées pour notre dîner en tête-à-tête</li>
+        <li>Une petite veste pour profiter de la soirée</li>
+      </ul>
+    </div>
+    <div class="cat">
+      <h4>Essentiels</h4>
+      <ul>
+        <li>Trousse de toilette</li>
+        <li>Lunettes de soleil</li>
+        <li>Tenue décontractée</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="final">
+  <div class="fade">
+    <div class="big2">Rendez-vous demain.</div>
+    <p>Prépare ton sac, ferme les yeux, et fais-moi confiance. Je m'occupe de tout le reste — toi, contente-toi d'être là, avec moi.</p>
+    <div class="heart-final">❤</div>
+    <p style="margin-top:30px; font-style:italic;">— Ton mari, qui t'aime un peu plus chaque année.</p>
+  </div>
+</section>
+
+<script>
+try {
+  if ('IntersectionObserver' in window) {
+    var els = document.querySelectorAll('.fade');
+    els.forEach(function(el){ el.classList.add('js-ready'); });
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) e.target.classList.add('in'); });
+    }, {threshold:.15});
+    els.forEach(function(el){ obs.observe(el); });
+    // filet de sécurité : si un élément n'est jamais détecté, on le révèle quand même
+    setTimeout(function(){ els.forEach(function(el){ el.classList.add('in'); }); }, 4000);
+  }
+} catch (e) {
+  document.querySelectorAll('.fade').forEach(function(el){ el.classList.remove('js-ready'); });
+}
+</script>
+</body>
+</html>
